@@ -24,7 +24,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Maven
-      run: mvn clean test
+      run: mvn test -Dkarate.env=dev "-Dkarate.options=--tags @smoke" 
 
     - name: Run Karate Tests
       run: mvn test clean

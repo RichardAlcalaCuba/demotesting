@@ -44,3 +44,15 @@ Feature: sample karate test script
     # Then status 200
     # And match response contains user
   
+
+  @login
+  Scenario: testing environment
+    # * def myEnvironment = karate.get('myEnvironment', currentEnvironment)
+     * print currentEnvironment
+
+
+  @smoke
+  Scenario: testing smoke
+    # * def myEnvironment = 'starting in global variable...'
+    # * def myEnvironment = java.lang.System.getenv('USERMMMM');
+    * call read('@login')

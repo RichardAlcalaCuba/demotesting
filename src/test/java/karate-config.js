@@ -5,13 +5,18 @@ function fn() {
     env = 'dev';
   }
   var config = {
+    currentEnvironment: '',
     env: env,
     myVarName: 'someValue'
   }
   if (env == 'dev') {
+    config.currentEnvironment = java.lang.System.getenv('API_DEV');
+
     // customize
     // e.g. config.foo = 'bar';
-  } else if (env == 'e2e') {
+  } else if (env == 'test') {
+    config.currentEnvironment = java.lang.System.getenv('API_TEST');
+
     // customize
   }
   return config;
