@@ -29,6 +29,9 @@ jobs:
     - name: Run Karate Tests
       run: mvn test clean
 
+    - name: List target directory contents
+      run: ls
+
     - name: Upload Karate Summary Reports
       uses: actions/upload-artifact@v3
       with:
