@@ -27,7 +27,7 @@ jobs:
       run: mvn clean test
 
     - name: Run Karate Tests
-      run: mvn test clean
+      run: mvn test
 
     - name: List target directory contents
       run: ls
