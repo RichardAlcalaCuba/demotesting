@@ -31,13 +31,6 @@ jobs:
         name: karate-reports
         path: target/karate-reports/** 
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: target/karate-reports
-        publish_branch: gh-pages-v2
-
     - name: Create index.html for Redirect
       run: |
         echo '<!DOCTYPE html>' > target/karate-reports/index.html
@@ -51,3 +44,11 @@ jobs:
         echo '<body>' >> target/karate-reports/index.html
         echo '    <p>If you are not redirected automatically, follow the <a href="karate-summary.html">link to the summary</a>.</p>' >> target/karate-reports/index.html
         echo '</body>' >> target/karate-reports/index.html
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/karate-reports
+          publish_branch: gh-pages-v2
+        
