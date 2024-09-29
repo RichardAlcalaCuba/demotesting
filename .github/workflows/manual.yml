@@ -30,7 +30,7 @@ jobs:
       run: mvn test clean
 
     - name: List target directory contents
-      run: ls -R target
+      run: ls
 
     - name: Upload Karate Summary Reports
       uses: actions/upload-artifact@v3
