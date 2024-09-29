@@ -28,3 +28,9 @@ jobs:
 
     - name: Run Karate Tests
       run: mvn test clean
+
+    - name: Upload Karate Summary Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: karate-reports
+        path: target/karate-reports/*.html  # Adjust to your report path
