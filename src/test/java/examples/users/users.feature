@@ -13,7 +13,7 @@ Feature: sample karate test script
 
     Given path 'users', first.id
     When method get
-    Then status 201
+    Then status 200
 
   Scenario: create a user and then get it by id
     * def user =
