@@ -22,7 +22,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build/Run Karate Tests
-      run: mvn test -Dkarate.env=test "-Dkarate.options=--tags @smoke"
+      run: mvn test -Dkarate.env=dev "-Dkarate.options=--tags @smoke"
       env:
           API_DEV: ${{ secrets.API_DEV }}
 
