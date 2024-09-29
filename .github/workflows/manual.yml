@@ -24,7 +24,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build/Run Karate Tests
-      run: mvn test clean
+      run: mvn test
 
     - name: List target directory contents [BEFORE]
       run: ls
